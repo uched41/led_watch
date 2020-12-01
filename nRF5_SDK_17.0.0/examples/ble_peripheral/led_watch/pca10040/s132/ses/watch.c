@@ -11,7 +11,7 @@
 #include "fsm.h"
 #include "ticker.h"
 #include "rtc.h"
-
+#include "watch.h"
 
 /* positions for writing digits */
 const location_t posi1 = {0,0};
@@ -28,7 +28,7 @@ extern const display_watch_animation_t slidein_horizontal_anim;
 extern const display_watch_animation_t cirular_anim;
 extern const display_watch_animation_t pixel_follow_anim;
 
-display_watch_animation_t     display_time_animations[5];
+display_watch_animation_t     display_time_animations[ANIMATION_COUNT];
 static ticks_t                watch_start_time; 
 static display_watch_state_t  watch_prev_state;
 
@@ -71,7 +71,7 @@ void display_watch_init(void){
 
 void display_set_time(display_t* display, location_t p1, location_t p2, location_t p3, location_t p4){
   rtc_read_time(&utime);
-  rtc_print_time(&utime);
+  //rtc_print_time(&utime);
   write_digit(display, p1, (utime.tm_hour)/10, user_config.hour_color, user_config.bck_color);
   write_digit(display, p2, (utime.tm_hour)%10, user_config.hour_color, user_config.bck_color);
   write_digit(display, p3, (utime.tm_min )/10, user_config.mins_color, user_config.bck_color);

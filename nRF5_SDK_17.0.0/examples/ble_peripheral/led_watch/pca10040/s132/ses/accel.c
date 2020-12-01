@@ -10,7 +10,7 @@
 #include "nrf_log.h"
 #include "hardware.h"
 
-#define INV_MSG_ENABLE
+//#define INV_MSG_ENABLE
 #ifdef  INV_MSG_ENABLE
 static  void msg_printer(int level, const char * str, va_list ap);
 #define MSG_LEVEL INV_MSG_LEVEL_DEBUG

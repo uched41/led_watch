@@ -37,6 +37,7 @@ typedef struct{
   charging_state_t charging_state;
   uint8_t connected;
   uint8_t dfu_ready;
+  uint8_t notification_enabled;
   float battery_voltage;
 }device_status_t;
 

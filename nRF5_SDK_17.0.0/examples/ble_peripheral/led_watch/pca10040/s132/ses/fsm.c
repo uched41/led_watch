@@ -19,7 +19,8 @@ device_status_t device_status = {
   .device_mode  = DEVICE_WATCH,
   .state        = STATE_STARTUP,
   .connected    = false,
-  .dfu_ready    = false
+  .dfu_ready    = false,
+  .notification_enabled = false
 };
 
 rtc_time_t utime;

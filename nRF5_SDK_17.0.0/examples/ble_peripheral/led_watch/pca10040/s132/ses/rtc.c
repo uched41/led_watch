@@ -217,7 +217,7 @@ uint8_t rtc_disable_alarm(void){
 
 
 void rtc_print_time(rtc_time_t *dt){
-  printf("%d:%d:%d %d:%d:%d\n", dt->tm_hour, dt->tm_min, dt->tm_sec, dt->tm_year+1900, dt->tm_mon+1, dt->tm_mday);
+  LOGI("%d:%d:%d %d:%d:%d", dt->tm_hour, dt->tm_min, dt->tm_sec, dt->tm_year+1900, dt->tm_mon+1, dt->tm_mday);
 }
 
 

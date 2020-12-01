@@ -9,6 +9,8 @@
 //#define CIRCULAR_ANIM           5
 #define PIXEL_FOLLOW_ANIM       6
 
+#define ANIMATION_COUNT 7
+
 #endif
 
 
