@@ -1,0 +1,51 @@
+#ifndef RTC_HAL_H
+#define RTC_HAL_H
+
+/* RTC DS1343 Registers */
+#define DS1343_SECONDS_REG	0x00
+#define DS1343_MINUTES_REG	0x01
+#define DS1343_HOURS_REG	0x02
+#define DS1343_DAY_REG		0x03
+#define DS1343_DATE_REG		0x04
+#define DS1343_MONTH_REG	0x05
+#define DS1343_YEAR_REG		0x06
+#define DS1343_ALM0_SEC_REG	0x07
+#define DS1343_ALM0_MIN_REG	0x08
+#define DS1343_ALM0_HOUR_REG	0x09
+#define DS1343_ALM0_DAY_REG	0x0A
+#define DS1343_ALM1_SEC_REG	0x0B
+#define DS1343_ALM1_MIN_REG	0x0C
+#define DS1343_ALM1_HOUR_REG	0x0D
+#define DS1343_ALM1_DAY_REG	0x0E
+#define DS1343_CONTROL_REG	0x0F
+#define DS1343_STATUS_REG	0x10
+#define DS1343_TRICKLE_REG	0x11
+#define DS1343_NVRAM		0x20
+
+#define DS1343_NVRAM_LEN	96
+
+/* DS1343 Control Registers bits */
+#define DS1343_EOSC		0x80
+#define DS1343_DOSF		0x20
+#define DS1343_EGFIL		0x10
+#define DS1343_SQW		0x08
+#define DS1343_INTCN		0x04
+#define DS1343_A1IE		0x02
+#define DS1343_A0IE		0x01
+
+/* DS1343 Status Registers bits */
+#define DS1343_OSF		0x80
+#define DS1343_IRQF1		0x02
+#define DS1343_IRQF0		0x01
+
+/* DS1343 Trickle Charger Registers bits */
+#define DS1343_TRICKLE_MAGIC	0xa0
+#define DS1343_TRICKLE_DS1	0x08
+#define DS1343_TRICKLE_1K	0x01
+#define DS1343_TRICKLE_2K	0x02
+#define DS1343_TRICKLE_4K	0x03
+
+
+#endif
+
+
